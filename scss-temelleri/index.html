@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10_ileri_çocuk_scss-temeller</title>
+    <!-- * Css Link -->
+    <!--  ! Scss sahip olduğu özellikler dolayı kullanılır.Fakat tarayıcıların Scss derleme (Kodu okuyup tarayıcıda bu değişikliği gerçekleştirme) özelliği yoktur.Bundan dolayı bizler scss uzantılı dosyayı değil css uzantılı dosyayı Html e bağlarız.-->
+    <!-- ? Peki css uzantılı dosya nasıl oluşacak ?
+     
+    * Scss uzantılı bir dosya oluştur.
+
+    * Live Sass Complier isimli eklenti indilir.
+    
+    * Sonrasında Vscode alt kısımında yer alan 'watch sass' kısımına tıklanır.Bu bizim için oluşturduğumuz scss dosyasının dizininde bir css birde css.map uzantılı 2 dosya oluşturur. Bizde Html de bu css uzantılı dosyayı link ile bağlarız.
+
+    
+    -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Scss Nedir ?</h1>
+      <p class="desc">
+        - Scss css 'in tüm özelliklerine sahiptir.Bunun dışında değişkenler,iç
+        içe yazım,moduler dosyalar gibi ekstra özelliklere sahiptir.
+      </p>
+      <h1 class="title">Scss 'in Avantajları Nelerdir ?</h1>
+      <ul>
+        <li class="list">Değişkenler (Variables)</li>
+        <li class="list">İç İçe Yazım</li>
+        <li class="list">Miras Yapısı</li>
+        <li class="list">Moduler Dosyalar</li>
+      </ul>
+
+      <!-- * Scss Değişkenler -->
+      <div class="kapsayıcı"></div>
+      <div class="kapsayıcı"></div>
+      <div class="kapsayıcı"></div>
+      <div class="kapsayıcı"></div>
+      <div class="kapsayıcı"></div>
+      <div class="kapsayıcı"></div>
+      <div class="kapsayıcı"></div>
+      <div class="kapsayıcı"></div>
+      <div class="kapsayıcı"></div>
+      <div class="kapsayıcı"></div>
+    </div>
+    <!-- * Scss İç İçe Yazım -->
+    <header>
+      <!-- Logo -->
+      <div class="logo">
+        <img src="https://picsum.photos/200" alt="logo" />
+      </div>
+      <!-- Navbar -->
+      <nav>
+        <ul class="navbar">
+          <li>Ana Sayfa</li>
+          <li>Hakkımızda</li>
+          <li>İletişim</li>
+          <li>Destek</li>
+        </ul>
+      </nav>
+    </header>
+    <!-- * Miras Yapısı -->
+    <a href="#" class="btn">Daha Fazla</a>
+    <button class="button">Buton-1</button>
+
+    <!--  todo: Html de 2 eleman oluşturunuz.Bu 2 elemandan birine bir class veririniz.Scss de oluşturduğunuz bu classı diğer elemanda miras alıp kullanınız. -->
+
+    <!-- * Moduler Dosya Kullanımı -->
+    <!-- * Scss de kodlarımızı daha kolay yönetmek için ayrı ayrı scss dosyaları oluşturulur.Bu scss dosyalarından birinin ana scss dosyası olması gerekir.Bu ana scss dosyası derlenip Html e aktarılır.Diğer dosyları ise "@import 'dosya adı' "" ile ana scss dosyasına dahil ederiz. -->
+    <div class="content">
+      <aside>
+        <h1>Aside</h1>
+      </aside>
+      <main>
+        <h1>Main</h1>
+      </main>
+    </div>
+  </body>
+</html>

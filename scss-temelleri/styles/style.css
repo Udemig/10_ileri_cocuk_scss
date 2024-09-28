@@ -1,0 +1,144 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 20px 30px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-color: bisque;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.title {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+}
+
+.desc {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.list {
+  list-style: none;
+  background-color: burlywood;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/*
+! Scss Değişkenler
+
+Bir projede belirli tema renkleri kullandığımızı düşünelim.Sonrasında bu renkleri değiştirmek istedik.Şimdiye kadar gördüğümüz kadarıyla bu değişiklik yapılacak tüm kısımlarda gelip teker  teker bu değişiklikleri yaparız.
+
+* Ama Variables (Değişkenler) kullanarak bu değişiklik daha kolay yapılır.
+
+
+*/
+.kapsayıcı {
+  width: 300px;
+  height: 300px;
+  background-color: tomato;
+  margin: 20px 10px;
+}
+
+/*
+* Scss İç İçe Yazım
+
+* Css de bir kapsayıcı içerisindeki elemanlara erişirken uzun yazımlarla karşılaşırız.(Header ın içerisindeki logo nun içerisindeki img)
+
+
+* Bu noktada scss içi içe yazım stili ile çok daha az kod yazarak stillendirme yapabiliriz.
+
+*/
+header {
+  background-color: gold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  margin-bottom: 200px;
+}
+header .logo img {
+  width: 80px;
+  border-radius: 20px;
+}
+header nav {
+  background-color: tomato;
+  padding: 20px 30px;
+}
+header nav .navbar {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin-right: 50px;
+}
+header nav .navbar li {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+header nav .navbar li:hover {
+  color: white;
+  background-color: black;
+}
+
+/* * Scss Miras Yapısı
+
+* Css de ortak yapılar için classlar oluşturduk.Şimdiyse Scss de bir elemana başka bir elemanlardan özellikleri almasını söyleyeceğiz.
+
+
+*/
+.btn, .button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button {
+  border: none;
+  outline: none;
+  background-color: chocolate;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.button:hover {
+  background-color: cadetblue;
+}
+
+.content {
+  border: 1px solid green;
+}
+
+aside {
+  background-color: blue;
+  height: 50vh;
+  width: 25%;
+}
+
+main {
+  background-color: chocolate;
+  width: 75%;
+}
+
+.content {
+  display: flex;
+}/*# sourceMappingURL=style.css.map */
