@@ -1,0 +1,82 @@
+@import "./gloabal";
+@import "./variables";
+
+header {
+  // Flex yapısını aktif ederken kullanacağımız kodları '.flex' classı altında topladık ve bunu miras aldık.
+  @extend .flex;
+  justify-content: space-between;
+  padding: 27px 17px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  // Eğer bu eleman başka bir eleman ile üst üste gelirse diğer elemanların üzerinde konumlanmasını söyledik
+  z-index: 1000;
+
+  // * Logo
+  .logo {
+    font-size: 33px;
+    font-weight: 700;
+    span {
+      color: $main-color;
+    }
+  }
+
+  // * Navbar
+  .navbar {
+    @extend .flex;
+    gap: 10px;
+    a {
+      font-size: $p-font;
+      font-weight: 500;
+      margin: 15px 22px;
+      text-transform: uppercase;
+      // Hove olunduğunda tekrar tekrar transition özelliğini yazmak yerine bunu bir class altında topladık ve bu classı miras aldık
+      @extend .transition;
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+
+  // * Header Right
+  .header-right {
+    @extend .flex;
+    a {
+      font-size: 20px;
+      margin-right: 18px;
+      margin-left: 5px;
+      @extend .transition;
+      &:hover {
+        color: $main-color;
+        transform: translateY(-3px);
+      }
+    }
+    a:nth-child(1) {
+      font-size: $p-font;
+      margin-right: 20px;
+    }
+  }
+}
+
+// * Responsive Tasarım
+
+@media (max-width: 1200px) {
+  .navbar li {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    justify-content: center;
+    .header-right a {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .logo {
+    font-size: 20px;
+  }
+}
