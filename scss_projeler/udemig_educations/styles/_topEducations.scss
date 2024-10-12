@@ -1,0 +1,64 @@
+@import "./gloabal";
+@import "./variables";
+
+.center-text,
+.center-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-text {
+  h2 {
+    font-size: $h2-font;
+    font-weight: 800;
+  }
+}
+.center-btn {
+  margin-top: 40px;
+}
+
+.top-educations-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  align-items: center;
+  gap: 3rem;
+  margin-top: 5rem;
+  .box {
+    position: relative;
+    margin: 20px 0;
+    &:hover > img {
+      transform: scale(1.05);
+    }
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      filter: brightness(70%);
+      cursor: pointer;
+      @extend .transition;
+    }
+    .content {
+      position: absolute;
+      bottom: 45px;
+      left: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h3,
+      h4,
+      h5 {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        i {
+          color: $main-color;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
