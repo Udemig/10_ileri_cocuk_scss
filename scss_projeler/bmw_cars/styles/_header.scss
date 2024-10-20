@@ -1,0 +1,66 @@
+@import "./modules";
+@import "./variables";
+@import "./mixin";
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  .logo {
+    width: 50px;
+    margin-left: 20px;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    a {
+      color: $text-color;
+      &:hover {
+        color: crimson;
+        transition: all 0.5s;
+      }
+    }
+  }
+  #nav-left {
+    a {
+      padding: 0 20px;
+      border-right: 1px solid gray;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  #nav-right {
+    gap: 30px;
+    font-size: 15px;
+    @include phone {
+      display: none;
+    }
+  }
+  .menu {
+    width: 40px;
+    display: none;
+    @include phone {
+      display: block;
+    }
+    &:hover + .opener {
+      display: flex;
+    }
+  }
+  .opener {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 85px;
+    background-color: rgb(220, 220, 220);
+    flex-direction: column;
+    box-shadow: 2px 2px 10px;
+    padding: 5px;
+    gap: 20px;
+    border-radius: 10px;
+    a {
+      color: #000;
+    }
+  }
+}
