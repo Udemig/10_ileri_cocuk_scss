@@ -1,0 +1,72 @@
+@import "./modules";
+@import "./mixin";
+@import "./variables";
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 100px;
+  background: linear-gradient(rgb(215, 215, 215) 40%, $bg-color 40%);
+  @include phone {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 40px;
+  }
+  .slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    max-width: 500px;
+    @include phone {
+      gap: 20px;
+    }
+    h1 {
+      @extend %heading;
+      font-size: 40px;
+      @include phone {
+        text-align: center;
+      }
+      span {
+        font-family: "Times New Roman", Times, serif;
+      }
+    }
+    p {
+      @extend %p;
+    }
+    img {
+      width: 200px;
+    }
+    h2 {
+      @extend %heading;
+    }
+    button {
+      @extend %button;
+      background-color: crimson;
+
+      &:hover {
+        background-color: rgb(168, 16, 46);
+      }
+    }
+  }
+  .images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+    img {
+      max-width: 200px;
+    }
+    .images-banner {
+      max-width: 800px;
+    }
+    .images-track {
+      max-width: 400px;
+    }
+    p {
+      max-width: 500px;
+      text-align: center;
+    }
+  }
+}
